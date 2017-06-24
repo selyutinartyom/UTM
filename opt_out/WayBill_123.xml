@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:Documents xmlns:c="http://fsrar.ru/WEGAIS/Common" xmlns:ns="http://fsrar.ru/WEGAIS/WB_DOC_SINGLE_01" xmlns:oref="http://fsrar.ru/WEGAIS/ClientRef" xmlns:pref="http://fsrar.ru/WEGAIS/ProductRef" xmlns:wb="http://fsrar.ru/WEGAIS/TTNSingle" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1.0">
+	<ns:Owner>
+		<ns:FSRAR_ID>030000022126</ns:FSRAR_ID>
+	</ns:Owner>
+	<ns:Document>
+		<ns:WayBill>
+			<wb:Identity>ПП0000137-12.01.2016-21:52:28</wb:Identity>
+			<wb:Header>
+				<wb:NUMBER>307</wb:NUMBER>
+				<wb:Date>2016-01-13</wb:Date>
+				<wb:ShippingDate>2016-01-12</wb:ShippingDate>
+				<wb:Type>WBInvoiceFromMe</wb:Type>
+				<wb:UnitType>Packed</wb:UnitType>
+				<wb:Shipper>
+					<oref:INN>1215062376</oref:INN>
+					<oref:KPP>120745001</oref:KPP>
+					<oref:ClientRegId>030000022126</oref:ClientRegId>
+					<oref:FullName>Общество с ограниченной ответственностью "Приток плюс"</oref:FullName>
+					<oref:ShortName>ООО "Приток плюс"</oref:ShortName>
+					<oref:address>
+						<oref:Country>643</oref:Country>
+						<oref:RegionCode>12</oref:RegionCode>
+						<oref:description>643,425220,12,МЕДВЕДЕВСКИЙ Р-Н,,СЕНЬКИНО Д,ПОЛЕВАЯ УЛ,2,Б,</oref:description>
+					</oref:address>
+				</wb:Shipper>
+				<wb:Consignee>
+					<oref:INN>1215176581</oref:INN>
+					<oref:KPP>121501001</oref:KPP>
+					<oref:ClientRegId>1110590</oref:ClientRegId>
+					<oref:FullName>Диона</oref:FullName>
+					<oref:ShortName>ООО "Диона"</oref:ShortName>
+					<oref:address>
+						<oref:Country>643</oref:Country>
+						<oref:RegionCode>12</oref:RegionCode>
+						<oref:description>Марий Эл Респ, , Йошкар-Ола г, , Карла Маркса ул, 109, , ,</oref:description>
+					</oref:address>
+				</wb:Consignee>
+				<wb:Transport>
+					<wb:TRAN_TYPE>413</wb:TRAN_TYPE>
+					<wb:TRAN_COMPANY/>
+					<wb:TRAN_CAR/>
+					<wb:TRAN_TRAILER/>
+					<wb:TRAN_CUSTOMER>ООО "Диона"</wb:TRAN_CUSTOMER>
+					<wb:TRAN_DRIVER>4_Соколов Дмитрий Иванович</wb:TRAN_DRIVER>
+					<wb:TRAN_LOADPOINT>643,425220,12,МЕДВЕДЕВСКИЙ Р-Н,,СЕНЬКИНО Д,ПОЛЕВАЯ УЛ,2,Б,</wb:TRAN_LOADPOINT>
+					<wb:TRAN_UNLOADPOINT>Марий Эл Респ, , Йошкар-Ола г, , Карла Маркса ул, 109, , ,</wb:TRAN_UNLOADPOINT>
+					<wb:TRAN_REDIRECT/>
+					<wb:TRAN_FORWARDER/>
+				</wb:Transport>
+				<wb:Base/>
+				<wb:Note/>
+			</wb:Header>
+			<wb:Content>
+				<wb:Position>
+					<wb:Identity>1</wb:Identity>
+					<wb:Product>
+						<pref:Type>АП</pref:Type>
+						<pref:FullName>Пивной напиток "Миллер Дженьюин Драфт" Холодная стерилизация 0,33л бутылка 4,7%</pref:FullName>
+						<pref:AlcCode>0037339000001234921</pref:AlcCode>
+						<pref:Capacity>0.3300</pref:Capacity>
+						<pref:AlcVolume>4.700</pref:AlcVolume>
+						<pref:ProductVCode>520</pref:ProductVCode>
+						<pref:Producer>
+							<oref:INN>7726260234</oref:INN>
+							<oref:KPP>732843001</oref:KPP>
+							<oref:ClientRegId>030000000022</oref:ClientRegId>
+							<oref:FullName>АКЦИОНЕРНОЕ ОБЩЕСТВО "ПИВОВАРНЯ МОСКВА-ЭФЕС"</oref:FullName>
+							<oref:ShortName>АО "ПИВОВАРНЯ МОСКВА-ЭФЕС"</oref:ShortName>
+							<oref:address>
+								<oref:Country>643</oref:Country>
+								<oref:RegionCode>73</oref:RegionCode>
+								<oref:description>643,432072,73,,УЛЬЯНОВСК Г,,ИНЖЕНЕРНЫЙ 44-Й ПРОЕЗД,1,,</oref:description>
+							</oref:address>
+						</pref:Producer>
+					</wb:Product>
+					<wb:Quantity>120</wb:Quantity>
+					<wb:Price>45.70</wb:Price>
+					<wb:Party>FB-000000003385637</wb:Party>
+					<wb:InformA>
+						<pref:RegId>FA-000000002629586</pref:RegId>
+					</wb:InformA>
+					<wb:InformB>
+						<pref:InformBItem>
+							<pref:BRegId>FB-000000003385637</pref:BRegId>
+						</pref:InformBItem>
+					</wb:InformB>
+				</wb:Position>
+			</wb:Content>
+		</ns:WayBill>
+	</ns:Document>
+</ns:Documents>

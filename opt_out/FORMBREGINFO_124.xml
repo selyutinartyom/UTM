@@ -1,0 +1,47 @@
+<ns:Documents xmlns:wbr="http://fsrar.ru/WEGAIS/TTNInformBReg" xmlns:pref="http://fsrar.ru/WEGAIS/ProductRef" xmlns:oref="http://fsrar.ru/WEGAIS/ClientRef" xmlns:ns="http://fsrar.ru/WEGAIS/WB_DOC_SINGLE_01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ns:Owner>
+    <ns:FSRAR_ID>3463047</ns:FSRAR_ID>
+  </ns:Owner>
+  <ns:Document>
+    <ns:TTNInformBReg>
+      <wbr:Header xmlns:wbr="http://fsrar.ru/WEGAIS/TTNInformBReg" xmlns:pref="http://fsrar.ru/WEGAIS/ProductRef" xmlns:oref="http://fsrar.ru/WEGAIS/ClientRef" xmlns:ns="http://fsrar.ru/WEGAIS/WB_DOC_SINGLE_01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <wbr:Identity>ПП0000137-12.01.2016-21:52:28</wbr:Identity>
+        <wbr:WBRegId>TTN-0001357143</wbr:WBRegId>
+        <wbr:EGAISFixNumber>WBF-201600000396118</wbr:EGAISFixNumber>
+        <wbr:EGAISFixDate>2016-01-12</wbr:EGAISFixDate>
+        <wbr:WBNUMBER>307</wbr:WBNUMBER>
+        <wbr:WBDate>2016-01-13</wbr:WBDate>
+        <wbr:Shipper>
+          <oref:ClientRegId>030000022126</oref:ClientRegId>
+          <oref:INN>1215062376</oref:INN>
+          <oref:KPP>120745001</oref:KPP>
+          <oref:FullName>Общество с ограниченной ответственностью "Приток плюс"</oref:FullName>
+          <oref:ShortName>ООО "Приток плюс"</oref:ShortName>
+          <oref:address>
+            <oref:Country>643</oref:Country>
+            <oref:RegionCode>12</oref:RegionCode>
+            <oref:description>643,425220,12,МЕДВЕДЕВСКИЙ Р-Н,,СЕНЬКИНО Д,ПОЛЕВАЯ УЛ,2,Б,</oref:description>
+          </oref:address>
+        </wbr:Shipper>
+        <wbr:Consignee>
+          <oref:ClientRegId>1110590</oref:ClientRegId>
+          <oref:INN>1215176581</oref:INN>
+          <oref:KPP>121501001</oref:KPP>
+          <oref:FullName>Диона</oref:FullName>
+          <oref:ShortName>ООО "Диона"</oref:ShortName>
+          <oref:address>
+            <oref:Country>643</oref:Country>
+            <oref:RegionCode>12</oref:RegionCode>
+            <oref:description>Марий Эл Респ, , Йошкар-Ола г, , Карла Маркса ул, 109, , ,</oref:description>
+          </oref:address>
+        </wbr:Consignee>
+      </wbr:Header>
+      <wbr:Content xmlns:wbr="http://fsrar.ru/WEGAIS/TTNInformBReg" xmlns:pref="http://fsrar.ru/WEGAIS/ProductRef" xmlns:oref="http://fsrar.ru/WEGAIS/ClientRef" xmlns:ns="http://fsrar.ru/WEGAIS/WB_DOC_SINGLE_01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <wbr:Position>
+          <wbr:Identity>1</wbr:Identity>
+          <wbr:InformBRegId>FB-000000006438362</wbr:InformBRegId>
+        </wbr:Position>
+      </wbr:Content>
+    </ns:TTNInformBReg>
+  </ns:Document>
+</ns:Documents>

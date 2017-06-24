@@ -1,0 +1,108 @@
+<!-- Модальное окно "Адрес Отправителя" -->
+<div class="modal fade" id="shipperAddressModal" tabindex="-1" role="dialog"
+     aria-labelledby="shipperAddressLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="shipperAddressLabel">Адрес Отправителя</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="shipperAddressCountry" class="control-label">Страна:</label>
+                        <input id="shipperAddressCountry" type="text"
+                               class="form-control input-sm" placeholder="Страна"
+                               pattern="^[0-9]{1,}$" maxlength="5" value="643">
+                    </div>
+                    <div class="form-group">
+                        <label for="shipperAddressDescription"
+                               class="control-label">Описание:</label>
+                        <input id="shipperAddressDescription" type="text"
+                               class="form-control input-sm" placeholder="Описание"
+                               maxlength="255">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="shipperAddressIndex"
+                                   class="control-label">Индекс:</label>
+                            <input id="shipperAddressIndex" type="text"
+                                   class="form-control input-sm" placeholder="Индекс"
+                                   pattern="^[0-9]{1,}$" maxlength="15">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="shipperAddressRegionCode"
+                                   class="control-label">Код региона:</label>
+                            <input id="shipperAddressRegionCode" type="text"
+                                   class="form-control input-sm" placeholder="Код региона"
+                                   pattern="^[0-9]{1,}$" maxlength="15">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="shipperAddressArea"
+                               class="control-label">Область:</label>
+                        <input id="shipperAddressArea" type="text"
+                               class="form-control input-sm" placeholder="Область"
+                               maxlength="255">
+                    </div>
+                    <div class="form-group">
+                        <label for="shipperAddressCity"
+                               class="control-label">Город:</label>
+                        <input id="shipperAddressCity" type="text"
+                               class="form-control input-sm" placeholder="Город"
+                               maxlength="255">
+                    </div>
+                    <div class="form-group">
+                        <label for="shipperAddressPlace"
+                               class="control-label">Место:</label>
+                        <input id="shipperAddressPlace" type="text"
+                               class="form-control input-sm" placeholder="Место"
+                               maxlength="255">
+                    </div>
+                    <div class="form-group">
+                        <label for="shipperAddressStreet"
+                               class="control-label">Улица:</label>
+                        <input id="shipperAddressStreet" type="text"
+                               class="form-control input-sm" placeholder="Улица"
+                               maxlength="255">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <label for="shipperAddressHouseGroup"
+                                   class="control-label">Дом:</label>
+                            <div id="shipperAddressHouseGroup" class="input-group">
+                                <input id="shipperAddressHouse" type="text"
+                                       class="form-control input-sm" placeholder="Дом"
+                                       maxlength="255">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="shipperAddressBuildingGroup"
+                                   class="control-label">Корпус:</label>
+                            <div id="shipperAddressBuildingGroup" class="input-group">
+                                <input id="shipperAddressBuilding" type="text"
+                                       class="form-control input-sm" placeholder="Корпус"
+                                       pattern="^[0-9]{1,}$" maxlength="2">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="shipperAddressLiterGroup"
+                                   class="control-label">Литера:</label>
+                            <div id="shipperAddressLiterGroup" class="input-group">
+                                <input id="shipperAddressLiter" type="text"
+                                       class="form-control input-sm" placeholder="Литера"
+                                       maxlength="1">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Применить
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

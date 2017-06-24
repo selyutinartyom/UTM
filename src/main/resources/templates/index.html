@@ -1,0 +1,15 @@
+{{#layout}}
+<div class="container">
+    <h2>Добро пожаловать на стартовую страницу UTM!</h2>
+    <ul>
+        <li><a href="/opt/out">Входящие (/opt/out)</a></li>
+        <li><a href="/opt/in">Исходящие (/opt/in)</a></li>
+    </ul>
+    Доступные файлы:
+    <ul>
+        {{#files}}
+        <li><a href="{{path}}">{{name}}</a></li>
+        {{/files}}
+    </ul>
+</div>
+{{/layout}}

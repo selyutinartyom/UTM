@@ -1,0 +1,224 @@
+{{#layout}}{{#title}}Converter{{/title}}
+<!-- Converter -->
+<div class="container">
+    <h2>Преобразование типов документов</h2>
+
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a href="#replyRestsToWayBill" data-toggle="tab">ReplyRests -> WayBill</a>
+        </li>
+        <li>
+            <a href="#others" data-toggle="tab">Others</a>
+        </li>
+    </ul>
+
+    <div id="converterTabContent" class="tab-content">
+
+        <!-- ReplyRests -> WayBill -->
+        <div id="replyRestsToWayBill" class="tab-pane fade active in">
+
+            <!-- Ошибки -->
+            <div id="myError" class="collapse">
+                <div class="alert alert-danger">
+                    <button class="close" type="button" data-toggle="collapse" data-target="#myError">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4>Неожиданно возникла ошибка!</h4>
+                    <p id="errorMessage">Что-то пошло не так :-(</p>
+                </div>
+            </div>
+
+            <!-- Форма -->
+            <form id="myForm" data-toggle="validator" role="form">
+                <!-- Документ -->
+                <div class="row">
+                    <div class="form-group col-sm-2 has-feedback">
+                        <label class="control-label small" for="numberGroup">Документ</label>
+                        <div id="numberGroup" class="input-group">
+                            <input id="number" type="text" class="form-control input-sm" placeholder="Номер документа"
+                                   maxlength="15" required>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors small"></div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-2 has-feedback">
+                        <label class="control-label small" for="dateGroup">Дата составления</label>
+                        <div id="dateGroup" class="input-group">
+                            <input id="date" data-provide="datepicker" class="form-control input-sm"
+                                   placeholder="Дата составления" maxlength="10" required>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors small"></div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-2 has-feedback">
+                        <label class="control-label small" for="shippingDateGroup">Дата отгрузки продукции</label>
+                        <div id="shippingDateGroup" class="input-group">
+                            <input id="shippingDate" data-provide="datepicker" class="form-control input-sm"
+                                   placeholder="Дата отгрузки продукции" maxlength="10" required>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors small"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Расширенные свойства документа -->
+                <div class="row">
+                    <div class="form-group col-sm-4">
+                        <label class="control-label small" for="base">Основание</label>
+                        <input id="base" type="text" class="form-control input-sm" placeholder="Основание">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label class="control-label small" for="note">Примечание</label>
+                        <input id="note" type="text" class="form-control input-sm" placeholder="Примечание">
+                    </div>
+                    <div class="form-group col-sm-4"></div>
+                </div>
+                <hr>
+                <!-- Отправитель -->
+                <div class="row">
+                    <div class="form-group col-sm-2 has-feedback">
+                        <label class="control-label small" for="shipperFsrarIdGroup">ФСРАР ID Отправителя</label>
+                        <div id="shipperFsrarIdGroup" class="input-group">
+                            <input id="shipperFsrarId" type="text" class="form-control input-sm"
+                                   placeholder="ФСРАР ID Отправителя" pattern="^[0-9]{12,}$" maxlength="12" required>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors small">12 значный цифровой код</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-2 has-feedback">
+                        <label class="control-label small" for="shipperInnGroup">ИНН Отправителя</label>
+                        <div id="shipperInnGroup" class="input-group">
+                            <input id="shipperInn" type="text" class="form-control input-sm"
+                                   placeholder="ИНН Отправителя" pattern="^[0-9]{1,}$" maxlength="12" required>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors small">Цифровой код</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-2 has-feedback">
+                        <label class="control-label small" for="shipperKppGroup">КПП Отправителя</label>
+                        <div id="shipperKppGroup" class="input-group">
+                            <input id="shipperKpp" type="text" class="form-control input-sm"
+                                   placeholder="КПП Отправителя" pattern="^[0-9]{1,}$" maxlength="12" required>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors small">Цифровой код</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-4 has-feedback">
+                        <label class="control-label small" for="shipperNameGroup">Название Отправителя</label>
+                        <div id="shipperNameGroup" class="input-group col-sm-12">
+                            <input id="shipperName" type="text" class="form-control input-sm"
+                                   placeholder="Название Отправителя" maxlength="255" required>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors small">Текстовое поле</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-2 has-feedback">
+                        <!-- Кнопка "Адрес Отправителя" -->
+                        <label class="control-label small" for="shipperAddressGroup">Адрес Отправителя</label>
+                        <div id="shipperAddressGroup" class="input-group">
+                            <button class="btn btn-sm btn-default" type="button" data-toggle="modal"
+                                    data-target="#shipperAddressModal">
+                                <span class="glyphicon glyphicon-book"></span>
+                            </button>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors small">Модальное окно</div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- Получатель -->
+                <div class="row">
+                    <div class="form-group col-sm-2 has-feedback">
+                        <label class="control-label small" for="consigneeFsrarIdGroup">ФСРАР ID Получателя</label>
+                        <div id="consigneeFsrarIdGroup" class="input-group">
+                            <input id="consigneeFsrarId" type="text" class="form-control input-sm"
+                                   placeholder="ФСРАР ID Получателя" pattern="^[0-9]{12,}$" maxlength="12" required>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors small">12 значный цифровой код</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-2 has-feedback">
+                        <label class="control-label small" for="consigneeInnGroup">ИНН Получателя</label>
+                        <div id="consigneeInnGroup" class="input-group">
+                            <input id="consigneeInn" type="text" class="form-control input-sm"
+                                   placeholder="ИНН Получателя" pattern="^[0-9]{1,}$" maxlength="12" required>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors small">Цифровой код</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-2 has-feedback">
+                        <label class="control-label small" for="consigneeKppGroup">КПП Получателя</label>
+                        <div id="consigneeKppGroup" class="input-group">
+                            <input id="consigneeKpp" type="text" class="form-control input-sm"
+                                   placeholder="КПП Получателя" pattern="^[0-9]{1,}$" maxlength="12" required>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors small">Цифровой код</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-4 has-feedback">
+                        <label class="control-label small" for="consigneeNameGroup">Название Получателя</label>
+                        <div id="consigneeNameGroup" class="input-group col-sm-12">
+                            <input id="consigneeName" type="text" class="form-control input-sm"
+                                   placeholder="Название Получателя" maxlength="255" required>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors small">Текстовое поле</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-2 has-feedback">
+                        <!-- Кнопка "Адрес Получателя" -->
+                        <label class="control-label small" for="consigneeAddressGroup">Адрес Получателя</label>
+                        <div id="consigneeAddressGroup" class="input-group">
+                            <button class="btn btn-sm btn-default" type="button" data-toggle="modal"
+                                    data-target="#consigneeAddressModal">
+                                <span class="glyphicon glyphicon-book"></span>
+                            </button>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors small">Модальное окно</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Поля для XML -->
+                <div class="row">
+                    <!-- Из -->
+                    <div class="form-group col-sm-6 has-feedback">
+                        <label class="control-label small" for="fromGroup">ReplyRests</label>
+                        <div id="fromGroup" class="input-group">
+                            <textarea id="areaFrom" class="form-control input-sm" rows="15" cols="100"
+                                      placeholder="ReplyRests" required></textarea>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <!-- В -->
+                    <div class="form-group col-sm-6">
+                        <label class="control-label small" for="toGroup">WayBill</label>
+                        <div id="toGroup" class="input-group">
+                            <textarea id="areaTo" class="form-control input-sm" rows="15" cols="100"
+                                      disabled title="WayBill"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Others -->
+        <div id="others" class="tab-pane fade">
+            <p>// TODO</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- Модальные окна -->
+{{>modal/shipper-modal}}
+{{>modal/consignee-modal}}
+
+{{#userScripts}}
+<script src="js/converter.js"></script>
+{{/userScripts}}
+{{/layout}}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content="Tillypad REST API"/>
+    <meta name="author" content="Selyutin Artyom"/>
+    <meta name="viewport" content="width=device-width"/>
+
+    <title>{{{layout.title}}}</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+
+    <!-- Bootstrap datepicker CSS -->
+    <link href="/webjars/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css" rel="stylesheet" media="screen"/>
+
+    <!-- User styles -->
+    <style type="text/css">
+        .navbar-brand {
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Статическое меню -->
+<!-- TODO динамическое меню -->
+{{>menu/main-menu}}
+
+{{{layout.body}}}
+
+<!-- jQuery -->
+<script src="/webjars/jquery/3.2.0/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap validator -->
+<script src="/webjars/bootstrap-validator/0.11.9/js/validator.js"></script>
+
+<!-- Bootstrap datepicker -->
+<script src="/webjars/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+<script src="/webjars/bootstrap-datepicker/1.6.4/locales/bootstrap-datepicker.ru.min.js"></script>
+<script>
+    $(function () {
+        // Defaults for all options can be modified directly by changing values in the $.fn.datepicker.defaults hash:
+        $.fn.datepicker.defaults.format = "dd.mm.yyyy";
+        $.fn.datepicker.defaults.weekStart = 1;
+        $.fn.datepicker.defaults.todayBtn = "linked";
+        $.fn.datepicker.defaults.language = "ru";
+        $.fn.datepicker.defaults.autoclose = true;
+        $.fn.datepicker.defaults.todayHighlight = true;
+    });
+</script>
+
+<!-- User scripts -->
+<script src="js/menu.js"></script>
+<script src="js/error.js"></script>
+{{{layout.userScripts}}}
+</body>
+</html>

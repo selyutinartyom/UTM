@@ -1,0 +1,109 @@
+<!-- Модальное окно "Адрес Отправителя" -->
+<div class="modal fade" id="consigneeAddressModal" tabindex="-1" role="dialog"
+     aria-labelledby="consigneeAddressLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="consigneeAddressLabel">Адрес Получателя</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="consigneeAddressCountry"
+                               class="control-label">Страна:</label>
+                        <input id="consigneeAddressCountry" type="text"
+                               class="form-control input-sm" placeholder="Страна"
+                               pattern="^[0-9]{1,}$" maxlength="5" value="643">
+                    </div>
+                    <div class="form-group">
+                        <label for="consigneeAddressDescription"
+                               class="control-label">Описание:</label>
+                        <input id="consigneeAddressDescription" type="text"
+                               class="form-control input-sm" placeholder="Описание"
+                               maxlength="255">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="consigneeAddressIndex"
+                                   class="control-label">Индекс:</label>
+                            <input id="consigneeAddressIndex" type="text"
+                                   class="form-control input-sm" placeholder="Индекс"
+                                   pattern="^[0-9]{1,}$" maxlength="15">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="consigneeAddressRegionCode"
+                                   class="control-label">Код региона:</label>
+                            <input id="consigneeAddressRegionCode" type="text"
+                                   class="form-control input-sm" placeholder="Код региона"
+                                   pattern="^[0-9]{1,}$" maxlength="15">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="consigneeAddressArea"
+                               class="control-label">Область:</label>
+                        <input id="consigneeAddressArea" type="text"
+                               class="form-control input-sm" placeholder="Область"
+                               maxlength="255">
+                    </div>
+                    <div class="form-group">
+                        <label for="consigneeAddressCity"
+                               class="control-label">Город:</label>
+                        <input id="consigneeAddressCity" type="text"
+                               class="form-control input-sm" placeholder="Город"
+                               maxlength="255">
+                    </div>
+                    <div class="form-group">
+                        <label for="consigneeAddressPlace"
+                               class="control-label">Место:</label>
+                        <input id="consigneeAddressPlace" type="text"
+                               class="form-control input-sm" placeholder="Место"
+                               maxlength="255">
+                    </div>
+                    <div class="form-group">
+                        <label for="consigneeAddressStreet"
+                               class="control-label">Улица:</label>
+                        <input id="consigneeAddressStreet" type="text"
+                               class="form-control input-sm" placeholder="Улица"
+                               maxlength="255">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <label for="consigneeAddressHouseGroup"
+                                   class="control-label">Дом:</label>
+                            <div id="consigneeAddressHouseGroup" class="input-group">
+                                <input id="consigneeAddressHouse" type="text"
+                                       class="form-control input-sm" placeholder="Дом"
+                                       maxlength="255">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="consigneeAddressBuildingGroup"
+                                   class="control-label">Корпус:</label>
+                            <div id="consigneeAddressBuildingGroup" class="input-group">
+                                <input id="consigneeAddressBuilding" type="text"
+                                       class="form-control input-sm" placeholder="Корпус"
+                                       pattern="^[0-9]{1,}$" maxlength="2">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="consigneeAddressLiterGroup"
+                                   class="control-label">Литера:</label>
+                            <div id="consigneeAddressLiterGroup" class="input-group">
+                                <input id="consigneeAddressLiter" type="text"
+                                       class="form-control input-sm" placeholder="Литера"
+                                       maxlength="1">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Применить
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

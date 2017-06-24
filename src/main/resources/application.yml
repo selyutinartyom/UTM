@@ -1,0 +1,116 @@
+server:
+  address: localhost
+  port: 8080
+  error:
+    whitelabel:
+      enabled: true
+
+# utm properties
+utm:
+  path: ./
+  outFileName: out.xml
+  inFileName: in.xml
+  inResponseFileName: in_response.xml
+  opt:
+    out:
+      path: ./opt_out/
+      documents:
+        - WayBill
+        - WayBill_v2
+        - FormBRegInfo
+        - Form2RegInfo
+        - ReplyForm1
+        - ReplyForm2
+        - WayBillTicket
+        - Ticket
+        - ReplyFormA
+        - ReplyFormB
+        - ReplyPartner
+        - ReplyAP
+        - ReplyAP_v2
+        - InventoryRegInfo
+        - ReplyHistFormB
+        - ReplyClientVersion
+        - RepInformF1Reg
+        - ReplyRests
+        - ReplyRests_v2
+        - ReplyRestsShop_v2
+        - ReplyRestsShop_Mini
+        - ReplyHistoryShop
+        - ReplyHistoryForm2
+        - ReplyNoAnswerTTN
+        - ReplySpirit_v2
+        - ReplySSP_v2
+        - TTNInformF2Reg
+        - ReplyWriteOffCheque
+    in:
+      path: ./opt_in/
+      documents:
+        - WayBillAct
+        - WayBillAct_v2
+        - WayBillTicket
+        - QueryFormA
+        - QueryFormB
+        - QueryFormF1
+        - QueryFormF2
+        - QueryPartner
+        - QueryClients
+        - QueryClients_v2
+        - QueryAP
+        - QueryAP_v2
+        - RequestRepealWB
+        - QueryRests
+        - QueryRests_v2
+        - QueryRests_Mini
+        - ActChargeOn
+        - ActChargeOn_v2
+        - RequestRepealACO
+        - ActWriteOff
+        - ActWriteOff_v2
+        - RequestRepealAWO
+        - QueryHistoryFormB
+        - QueryClientVersion
+        - RequestAddFProducer
+        - RequestAddProducts
+        - QueryResendDoc
+        - RepProducedProduct
+        - QueryRejectRepProduced
+        - RepImportedProduct
+        - QueryRejectRepImported
+        - TransferToShop
+        - TransferFromShop
+        - QueryRestsShop_v2
+        - ActChargeOnShop_v2
+        - ActWriteOffShop_v2
+        - QueryRestsShop_Mini
+        - QueryHistoryRestShop
+        - QueryNATTN
+        - QueryBarcode
+        - Asiiu
+        - AsiiuTime
+        - QuerySP_v2
+        - QuerySSP_v2
+        - ActInventoryInformBReg
+        - InfoVersionTTN
+        - QueryWriteOffCheque
+
+# enable RESTful point "/shutdown" to application through JMX
+endpoints:
+  shutdown:
+    enabled: true
+management:
+  security:
+    enabled: false
+spring:
+  mustache:
+    expose-request-attributes: true
+
+# log configuration
+#debug: false
+#logging:
+#  level: warn
+logging:
+  level:
+    org.springframework.security: INFO
+    org.springframework.web: INFO
+    io.secundus: INFO

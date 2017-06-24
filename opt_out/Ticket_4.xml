@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ns:Documents xmlns:tc="http://fsrar.ru/WEGAIS/Ticket" xmlns:oref="http://fsrar.ru/WEGAIS/ClientRef" xmlns:ns="http://fsrar.ru/WEGAIS/WB_DOC_SINGLE_01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1.0">
+    <ns:Owner>
+        <ns:FSRAR_ID>3463047</ns:FSRAR_ID>
+    </ns:Owner>
+    <ns:Document>
+        <ns:Ticket>
+            <tc:TicketDate>2016-03-17T14:53:04.5833905</tc:TicketDate>
+            <tc:Identity>Л100003338</tc:Identity>
+            <tc:DocId>2C14CBBA-2DCC-4A63-9D15-55DC6453A8A5</tc:DocId>
+            <tc:TransportId>349a50a4-367d-4bb3-8dca-6b149062902b</tc:TransportId>
+            <tc:RegID>TTN-0014396814</tc:RegID>
+            <tc:DocHash />
+            <tc:DocType>WAYBILL</tc:DocType>
+            <tc:OperationResult>
+                <tc:OperationName>Confirm</tc:OperationName>
+                <tc:OperationResult>Accepted</tc:OperationResult>
+                <tc:OperationDate>2016-03-17T14:53:04.41</tc:OperationDate>
+                <tc:OperationComment>Накладная №Л100003338 от 17.03.2016 00:00:00 подтверждена</tc:OperationComment>
+            </tc:OperationResult>
+        </ns:Ticket>
+    </ns:Document>
+</ns:Documents>
